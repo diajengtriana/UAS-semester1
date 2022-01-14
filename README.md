@@ -6,7 +6,7 @@ Pada UAS di pertemuan ke-16 ini, saya diberikan soal :
 
 <img width="563" alt="soalUAS" src="https://user-images.githubusercontent.com/92905452/149556229-c790141e-09d3-4e86-bc0e-2443a1ad143f.png">
 
-# SOAL 1 (DAFTAR_NILAI)
+# SOAL 1 (Daftar_Nilai)
 Dibawah ini saya telah mencantumkan beberapa syntax yang akan menghasilkan semua modul dari Daftar_Nilai yang diantaranya adalah (Tambah Data, Ubah Data, Hapus data, dan Cari Data)
 
     dataMhs = {}
@@ -86,7 +86,7 @@ Dibawah ini saya telah mencantumkan beberapa syntax yang akan menghasilkan semua
                 print("|                        TIDAK ADA DATA!                          |")
                 print("===================================================================")
 
-Disini saya akan mencoba untuk menguraikannya. Pertama untuk mengahasilkan modul #Tambah Data kamu perlu memasukan syntax dibawah ini :
+Disini saya akan mencoba untuk menguraikannya. Pertama untuk mengahasilkan modul **Tambah Data** kamu perlu memasukan syntax dibawah ini :
 
     if (c.lower() == 't'):
             print('\nTambah Data Mahasiswa')
@@ -99,13 +99,13 @@ Disini saya akan mencoba untuk menguraikannya. Pertama untuk mengahasilkan modul
             dataMhs[nama]= nim, nilaiTugas, nilaiUts, nilaiUas, nilaiAkhir
             print("\nData Berhasil Ditambahkan!")
 
-Jadi kesimpulannya, jika menggunakan syntax diatas dan memasukkan #'t' pada kolom yang tersedia dan kalian run, maka akan mendapatkan output seperti di bawah ini :
+Jadi kesimpulannya, jika menggunakan syntax diatas dan memasukkan **'t'** pada kolom yang tersedia dan kalian run, maka akan mendapatkan output seperti di bawah ini :
 
 <img width="373" alt="UAStambah" src="https://user-images.githubusercontent.com/92905452/149559595-2e7d740d-09f0-42ac-9713-7ca28fe77160.png">
 
 <img width="440" alt="UAStambahlagi" src="https://user-images.githubusercontent.com/92905452/149559980-c5ce5319-ffe2-4687-b7fd-43de06e7f54c.png">
 
-Kedua untuk menghasilkan modul # Ubah Data perlu memasukkan syntax dibawah ini :
+Kedua untuk menghasilkan modul **Ubah Data** perlu memasukkan syntax dibawah ini :
 
     elif (c.lower() == "u"):
             print('\nMengubah Data Mahasiswa')
@@ -120,11 +120,11 @@ Kedua untuk menghasilkan modul # Ubah Data perlu memasukkan syntax dibawah ini :
                 print("\nData Berhasil Di Update!")
             else:
                 print("Data tidak ditemukan!")
-Jadi kesimpulannya, jika menggunakan syntax diatas dan memasukkan 'u' pada kolom yang tersedia dan kalian run, maka akan mendapatkan output seperti dibawah ini :
+Jadi kesimpulannya, jika menggunakan syntax diatas dan memasukkan **'u'** pada kolom yang tersedia dan kalian run, maka akan mendapatkan output seperti dibawah ini :
 
 <img width="463" alt="UASubah" src="https://user-images.githubusercontent.com/92905452/149560690-87a6edc2-5035-4ddf-b3a8-718986567a53.png">
 
-Ketiga untuk menghasilkan modul # Hapus data kamu perlu memasukkan syntax dibawah ini :
+Ketiga untuk menghasilkan modul **Hapus data** kamu perlu memasukkan syntax dibawah ini :
 
     elif (c.lower() == 'h'):
             nama = input("Masukkan Nama:  ")
@@ -154,7 +154,61 @@ Ketiga untuk menghasilkan modul # Hapus data kamu perlu memasukkan syntax dibawa
                 print("|                        TIDAK ADA DATA!                          |")
                 print("===================================================================")
                 
-Jadi kesimpulannya, jika menggunakan syntax diatas dan memasukkan 'h' pada kolom yang tersedia dan kalian run, maka akan mendapat output seperti dibawah ini :
+Jadi kesimpulannya, jika menggunakan syntax diatas dan memasukkan **'h'** pada kolom yang tersedia dan kalian run, maka akan mendapat output seperti dibawah ini :
 
 <img width="489" alt="UAShapus" src="https://user-images.githubusercontent.com/92905452/149561703-f411d0f7-4642-4cb6-b390-12bc6ea0ff3b.png">
 
+keempat untuk menghasilkan modul **Cari Data** kamu perlu memasukkan syntax dibawah ini :
+
+    elif (c.lower() == 'c'):
+            if dataMhs.items():
+                nama= input("Masukkan Nama\t\t: ")
+                nim= input("Masukkan NIM\t\t: ")
+                print("\n                     DAFTAR NILAI MAHASISWA                      ")
+                print("===================================================================")
+                print("| No |     Nama     |    NIM    | Tugas |  UTS  |  UAS  |  Akhir  |")
+                print("===================================================================")
+                i = 0
+                for x in dataMhs.items():
+                    i += 1
+                    print("| {6:2} | {0:12s} | {1:9s} | {2:5} | {3:5} | {4:5} |  {5:6} |".format(x[0], x[1][0], x[1][1], x[1][2], x[1][3], x[1][4], i))
+                print("===================================================================")
+            else:
+                print("\n                     DAFTAR NILAI MAHASISWA                      ")
+                print("===================================================================")
+                print("| No |     Nama     |    NIM    | Tugas |  UTS  |  UAS  |  Akhir  |")
+                print("===================================================================")
+                print("|                        TIDAK ADA DATA!                          |")
+                print("===================================================================")
+        elif (c.lower() == 'l'):
+            if dataMhs.items():
+                print("\n                     DAFTAR NILAI MAHASISWA                      ")
+                print("===================================================================")
+                print("| No |     Nama     |    NIM    | Tugas |  UTS  |  UAS  |  Akhir  |")
+                print("===================================================================")
+                i = 0
+                for x in dataMhs.items():
+                    i += 1
+                    print("| {6:2} | {0:12s} | {1:9s} | {2:5} | {3:5} | {4:5} |  {5:6} |".format(x[0], x[1][0], x[1][1], x[1][2], x[1][3], x[1][4], i))
+                print("===================================================================")
+            else:
+                print("\n                     DAFTAR NILAI MAHASISWA                      ")
+                print("===================================================================")
+                print("| No |     Nama     |    NIM    | Tugas |  UTS  |  UAS  |  Akhir  |")
+                print("===================================================================")
+                print("|                        TIDAK ADA DATA!                          |")
+                print("===================================================================")
+                
+Jadi kesimpulannya, jika menggunakan syntax diatas dan memasukkan **'c'** pada kolom yang tersedia dan kalian run, maka akan mendapat output seperti dibawah ini :
+
+<img width="428" alt="image" src="https://user-images.githubusercontent.com/92905452/149563172-ebe9f4eb-b3d5-4629-a69f-5a4ee362ade7.png">
+
+# SOAL 2 (View_Nilai)
+Untuk menjawab soal nomor 2, kalian hanya perlu mengetik huruf **"L"** pada kolom yang telah disediakan untuk melihat hasil pencarian dan daftar nilai. maka akan mendapatkan hasil output seperti gambar dibawah ini :
+
+<img width="422" alt="image" src="https://user-images.githubusercontent.com/92905452/149563938-0429fa6c-ce6d-4f30-b2a0-93a596d8337f.png">
+
+# SOAL 3 (Input_Nilai)
+Pada soal ke-3 ini, jika kalian ingin menginput suatu data, kalian hanya perlu mengetik huruf **"T"** untuk menambahkan suatu data. Dan hasil output yang dihasilkan seperti gambar dibawah ini :
+
+<img width="440" alt="UAStambahlagi" src="https://user-images.githubusercontent.com/92905452/149564395-01b300d8-aca4-4d17-bd9d-261dd2f87624.png">
